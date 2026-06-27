@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.layout.Pane?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ueh.ueh19.MainDashboardController" stylesheets="@styles.css">
+   
+   <left>
+      <VBox styleClass="sidebar" prefWidth="200.0" spacing="10.0" BorderPane.alignment="CENTER" alignment="CENTER">
+         <children>
+            <Label text="CHỨC NĂNG" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </Label>
+            
+            <Button fx:id="posButton" onAction="#openPosScreen" text="Bán hàng (POS)" styleClass="sidebar-button" maxWidth="Infinity" />
+            <Button fx:id="productManagementButton" onAction="#openProductManagement" text="Quản lý Sản phẩm" styleClass="sidebar-button" maxWidth="Infinity" />
+            <Button fx:id="userManagementButton" onAction="#openUserManagement" text="Quản lý nhân viên" styleClass="sidebar-button" maxWidth="Infinity" />
+            <Button fx:id="statisticsButton" onAction="#openStatisticsScreen" text="Thống kê &amp; Báo cáo" styleClass="sidebar-button" maxWidth="Infinity" />
+            
+            <Pane VBox.vgrow="ALWAYS" />
+            
+            <Button fx:id="logoutButton" onAction="#handleLogout" text="Đăng xuất" styleClass="btn-red" maxWidth="Infinity" prefHeight="40.0" />
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </VBox>
+   </left>
+   
+   <center>
+      <VBox styleClass="root" BorderPane.alignment="CENTER" alignment="CENTER" spacing="10.0">
+         <children>
+            <Label fx:id="welcomeLine1" text="Chào mừng!">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="welcomeLine2" text="Vai trò của bạn là:">
+               <font>
+                  <Font size="18.0" />
+               </font> </Label>
+         </children>
+      </VBox>
+   </center>
+   
+</BorderPane>

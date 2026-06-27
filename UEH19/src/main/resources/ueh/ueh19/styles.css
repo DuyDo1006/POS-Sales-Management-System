@@ -1,0 +1,97 @@
+/* --- NỀN CHUNG & FONT CHỮ --- */
+.root {
+    -fx-font-family: 'Arial'; /* <-- FONT CHUNG CHO TOÀN BỘ ỨNG DỤNG */
+    -fx-background-color: #ecf0f1; /* Màu nền xám rất nhạt */
+}
+
+/* --- ĐẢM BẢO CÁC THÀNH PHẦN KHÁC CŨNG DÙNG FONT --- */
+.label {
+    -fx-font-family: 'Arial'; /* <-- FONT CHO TẤT CẢ CÁC NHÃN */
+}
+
+.button {
+    -fx-font-family: 'Arial'; /* <-- FONT CHO NÚT BẤM */
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5; /* Bo góc nhẹ */
+    -fx-cursor: hand; /* Thêm hiệu ứng con trỏ chuột */
+}
+
+.table-view .column-header .label {
+     -fx-font-family: 'Arial'; /* <-- FONT CHO TIÊU ĐỀ CỘT BẢNG (RẤT QUAN TRỌNG) */
+}
+
+.text-field, .text-area, .choice-box {
+    -fx-font-family: 'Arial'; /* <-- FONT CHO Ô NHẬP LIỆU */
+}
+
+
+/* --- CÁC LOẠI NÚT BẤM (BUTTON) --- */
+
+/* Nút chung (Đã có ở trên) */
+
+/* Nút màu Xanh Dương (Đăng nhập, Hoàn tất) */
+.btn-blue {
+    -fx-background-color: #007bff;
+}
+.btn-blue:hover {
+    -fx-background-color: #0069d9;
+}
+
+/* Nút màu Xanh Lá (Thêm) */
+.btn-green {
+    -fx-background-color: #2ecc71;
+}
+.btn-green:hover {
+    -fx-background-color: #27ae60;
+}
+
+/* Nút màu Vàng (Sửa) */
+.btn-yellow {
+    -fx-background-color: #f1c40f;
+    -fx-text-fill: #333; /* Chữ đen cho dễ đọc */
+}
+.btn-yellow:hover {
+    -fx-background-color: #f39c12;
+}
+
+/* Nút màu Đỏ (Xóa, Đăng xuất) */
+.btn-red {
+    -fx-background-color: #e74c3c;
+}
+.btn-red:hover {
+    -fx-background-color: #c0392b;
+}
+
+/* Nút màu Xám (Làm mới) */
+.btn-gray {
+    -fx-background-color: #7f8c8d;
+}
+.btn-gray:hover {
+    -fx-background-color: #95a5a6;
+}
+
+/* --- GIAO DIỆN MAIN DASHBOARD --- */
+.sidebar {
+    -fx-background-color: #34495e; /* Màu xanh đen */
+}
+
+.sidebar-button {
+    -fx-background-color: #4a657c; /* Màu xanh xám cho nút */
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 0; /* Không bo góc */
+    -fx-alignment: CENTER; /* Đã CĂN GIỮA */
+    -fx-padding: 10 15;
+    -fx-pref-height: 40px;
+}
+.sidebar-button:hover {
+    -fx-background-color: #5d7c9a;
+}
+
+/* --- GIAO DIỆN POS --- */
+.label-total {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #007bff; /* Màu xanh dương giống nút */
+}

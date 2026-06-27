@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ueh.ueh19.UserManagementController" stylesheets="@styles.css">
+   <children>
+      <SplitPane dividerPositions="0.4" prefHeight="500.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane styleClass="root">
+               <children>
+                  <VBox prefHeight="498.0" prefWidth="275.0" spacing="15.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label text="Thông tin Người dùng">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <GridPane hgap="10.0" vgap="10.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" prefWidth="170.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="Tên đăng nhập" />
+                              <Label text="Mật khẩu" GridPane.rowIndex="1" />
+                              <Label text="Họ và tên" GridPane.rowIndex="2" />
+                              <Label text="Vai trò" GridPane.rowIndex="3" />
+                              <TextField fx:id="usernameField" GridPane.columnIndex="1" />
+                              <TextField fx:id="fullNameField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <PasswordField fx:id="passwordField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <ChoiceBox fx:id="roleChoiceBox" prefWidth="170.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                           </children>
+                        </GridPane>
+                        <HBox alignment="CENTER" prefHeight="39.0" prefWidth="287.0" spacing="10.0">
+                           <children>
+                              <Button fx:id="addButton" onAction="#handleAddButton" text="Thêm" styleClass="btn-green" prefWidth="70" prefHeight="35"/>
+                              <Button fx:id="updateButton" onAction="#handleUpdateButton" text="Sửa" styleClass="btn-yellow" prefWidth="70" prefHeight="35"/>
+                              <Button fx:id="deleteButton" onAction="#handleDeleteButton" text="Xóa" styleClass="btn-red" prefWidth="70" prefHeight="35"/>
+                           </children>
+                        </HBox>
+                        <Button maxWidth="Infinity" onAction="#handleRefreshButton" text="Làm mới / Xóa trắng" styleClass="btn-gray" prefHeight="35" />
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </AnchorPane>
+          <AnchorPane prefHeight="498.0" prefWidth="504.0" styleClass="root">
+               <children>
+                  <VBox layoutX="-17.6" prefHeight="498.0" prefWidth="494.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" spacing="10.0">
+                           <children>
+                              <Label text="Tìm kiếm theo tên:" />
+                              <TextField fx:id="searchField" promptText="Nhập họ tên hoặc username..." HBox.hgrow="ALWAYS" />
+                           </children>
+                        </HBox>
+                        <TableView fx:id="userTable" prefHeight="429.0" prefWidth="436.0" VBox.vgrow="ALWAYS">
+                           <columns>
+                            <TableColumn fx:id="idColumn" prefWidth="40.0" text="ID" />
+                            <TableColumn fx:id="usernameColumn" prefWidth="132.79999923706055" text="Tên đăng nhập" />
+                            <TableColumn fx:id="fullNameColumn" prefWidth="118.39994812011719" text="Họ và tên" />
+                            <TableColumn fx:id="roleColumn" prefWidth="71.199951171875" text="Vai trò" />
+                            <TableColumn fx:id="orderCountColumn" prefWidth="136.80010986328125" text="Số đơn đã bán" />
+                           </columns>
+                        </TableView>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
