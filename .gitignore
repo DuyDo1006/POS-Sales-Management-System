@@ -1,0 +1,8 @@
+UEH19/target/
+UEH19/database/
+__MACOSX/
+miniconda_envs/
+*.zip
+*.docx
+*.ipynb
+.DS_Store
