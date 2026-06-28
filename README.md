@@ -99,7 +99,7 @@ graph LR
 Trong bối cảnh kinh tế hiện đại, việc tối ưu hóa quy trình bán hàng và quản lý hiệu quả là yếu tố then chốt. Đề tài **"Xây dựng Ứng dụng Quản lý Bán hàng (POS)"** được thực hiện với mục tiêu học hỏi và thử nghiệm, sử dụng Java, JavaFX và các thư viện bên ngoài để mô phỏng đầy đủ các chức năng của một hệ thống POS thực tế.
 
 Ứng dụng hỗ trợ hai vai trò người dùng:
-- **Admin (Quản lý)**toàn quyền quản lý sản phẩm, nhân viên, thống kê và xuất báo cáo.
+- **Admin (Quản lý)** toàn quyền quản lý sản phẩm, nhân viên, thống kê và xuất báo cáo.
 - **User (Nhân viên)** – chỉ truy cập giao diện bán hàng POS.
 
 ### 2. Công nghệ sử dụng
